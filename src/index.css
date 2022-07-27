@@ -3,6 +3,21 @@ h1{
   font-size: xx-large;
 }
 
+body {
+  color: black;
+    width: 586px;
+    height: 634px;
+    margin: 0px auto;
+    background-color: snow;
+     border: 7px solid black; 
+    border-radius: 1px;
+}
+
+input{
+  margin-left: 208px;
+    padding-left: 11px;
+}
+
   img {
     display: block;
     width: 30%;
@@ -10,4 +25,27 @@ h1{
     margin: 0 auto;
     border: px solid black;
     border-radius: 50px;
+  }
+
+  html {
+    font-size: 26px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    background-color: blueviolet;
+  }
+
+  .error-output{
+    margin-left:10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+  }
+  
+  body {
+    color: black;
+      width: 586px;
+      height: 634px;
+      margin: 0px auto;
+      background-color: snow;
+       border: 7px solid black; 
+      border-radius: 1px;
   }
