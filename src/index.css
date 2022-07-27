@@ -1,6 +1,30 @@
-h1{
+.App {
   text-align: center;
-  font-size: xx-large;
+  background-color: rgb(236, 132, 34);
+  padding: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; 
+  }
+}
+
+html {
+  font-size: 14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular';
+  background-color: blueviolet;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+html {
+  font-size: 26px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular';
+  background-color: blueviolet;
 }
 
 body {
@@ -13,39 +37,40 @@ body {
     border-radius: 1px;
 }
 
-input{
-  margin-left: 208px;
-    padding-left: 11px;
+img {
+  display: block;
+  width: 30%;
+  height: 10%;
+  margin: 0 auto;
+  border: px solid black;
+  border-radius: 50px;
 }
 
-  img {
-    display: block;
-    width: 30%;
-    height: 10%;
-    margin: 0 auto;
-    border: px solid black;
-    border-radius: 50px;
-  }
+.community {
+  text-align: left;
+}
 
-  html {
-    font-size: 26px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular';
-    background-color: blueviolet;
-  }
+h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0px;
+  color: rgb(48, 12, 145);
+  text-shadow: 3px 3px 1px black;
+}
 
-  .error-output{
-    margin-left:10px;
-    font-size: 12px;
-    font-style: italic;
-    color: red;
-  }
-  
-  body {
-    color: black;
-      width: 586px;
-      height: 634px;
-      margin: 0px auto;
-      background-color: snow;
-       border: 7px solid black; 
-      border-radius: 1px;
-  }
+p, li {
+  font: 15px Arial, Helvetica, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: black;
+  letter-spacing: 1px;
+  justify-content: center;
+  align-content: center;
+}
+
+.error-output{
+  margin-left:10px;
+  font-size: 12px;
+  font-style: italic;
+  color: red;
+}
