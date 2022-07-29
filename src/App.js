@@ -1,12 +1,13 @@
-//import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import React from 'react';
 import './App.css'
 import logo from './logo-Bridge.jpg'
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ContactUs from "./Component/ContactUs";
 import AboutUs from "./Component/AboutUs";
 import Home from "./Component/Home";
 import Layout from "./Component/Layout";
+import NoPage from "./Component/NoPage";
 
 class App extends React.Component { 
   url= 'https://www.bridgelabz.com/'
@@ -23,6 +24,7 @@ class App extends React.Component {
     console.log("save button is clicked", $event)
     window.open(this.url, "_blank");
   }
+
   onNameChange = (event) => {
     console.log("value is ", event.target.value);
     const nameRegex = RegExp('^[A-Z]{1}[A-Za-z]{2,}$');
@@ -30,7 +32,7 @@ class App extends React.Component {
     this.setState({userName: event.target.value})
     
     if (nameRegex.test(event.target.value)) {
-      this.setState({ nameError: ''})
+      this.setState({ nameError: ""})
     } else {
       this.setState({nameError: 'Name is Incorrect'})
     }
@@ -44,24 +46,25 @@ class App extends React.Component {
       alt ="The Bridgelabz logo: a Bridge to Employment through lab works" />
 
     <div className='App'>
-      <input onChange={this.onNameChange} />
+      <input onChange={this.onNameChange} /><br />
       <span className="error-output">{this.state.nameError}</span>
     </div>
 
-    {/* <div className='Routing'>
-      <BrowserRouter>
+    <div className='Routing'>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="contactus" element={<ContactUs />} />
-        <Route path="aboutus" element={<AboutUs />} />
+          <Route index element={<Home />} />
+          <Route path="aboutus" element={<AboutUs />} />
+          <Route path="contactus" element={<ContactUs />} />
+          <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-      </BrowserRouter>
-    </div> */}
-
-     <p><b>At BridgeLabz, we are a Community of</b></p>
+    </BrowserRouter>
+    </div>
+  
        <ul className='community'> 
+       <p><b>At BridgeLabz, we are a Community of</b></p>
           <li>Techonologist</li>
         <li>Thinkers</li>
           <li>Builders</li>
